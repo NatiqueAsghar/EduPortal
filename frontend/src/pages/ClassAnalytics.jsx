@@ -14,7 +14,7 @@ function ClassAnalytics() {
 
   const fetchData = async () => {
     try {
-      const res = await api.get(`/class/getByName/${name}`);
+      const res = await api.get(`/api/class/getByName/${name}`);
       setClassData(res.data);
     } catch (error) {
       console.error("Error fetching data:", error);
