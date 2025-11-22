@@ -17,8 +17,8 @@ function ProfitAnalysis() {
 
   const fetchData = async () => {
     try {
-      const res1 = await api.get(`/teacher/getTeacherSalariesSum`);
-      const res2 = await api.get(`/student/getStudentFeesSum`);
+      const res1 = await api.get(`/api/teacher/getTeacherSalariesSum`);
+      const res2 = await api.get(`/api/student/getStudentFeesSum`);
 
       setData(res1.data.sum);
       setData2(res2.data.sum);
