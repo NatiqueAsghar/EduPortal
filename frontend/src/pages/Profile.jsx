@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useRef, useState, useEffect } from "react";
-import api from "../utils/api"; // Axios instance
+import api from "../utils/api"; 
 import {
   updateUserStart,
   updateUserSuccess,
@@ -91,7 +91,7 @@ export default function Profile() {
   const handleSignOut = async () => {
     try {
       dispatch(signOutUserStart());
-      await api.post("/auth/signout");
+      await api.post("api/auth/signout");
       dispatch(signOutUserSuccess());
     } catch (err) {
       dispatch(signOutUserFailure(err.response?.data?.message || err.message));

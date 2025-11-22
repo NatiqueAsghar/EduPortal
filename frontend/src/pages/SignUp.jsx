@@ -22,7 +22,7 @@ export default function SignUp() {
     setError(null);
 
     try {
-      const res = await api.post("/auth/signup", formData);
+      const res = await api.post("api/auth/signup", formData);
 
       if (res.status !== 200 && res.status !== 201) {
         setError(res.data.message || "Signup failed");
