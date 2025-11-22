@@ -154,18 +154,16 @@ export const verifyAuth = async (req, res, next) => {
   try {
     const token = req.cookies.access_token;
 
-    if (!token) return next(errorHandler(401, "No authentication token"));
+    if (!token) return res.status(401).json({ message: "No authentication token" });
 
     jwt.verify(token, process.env.JWT_SECRET, async (err, decoded) => {
-      if (err) return next(errorHandler(403, "Invalid token"));
+      if (err) return res.status(403).json({ message: "Invalid token" });
 
       try {
         const user = await User.findById(decoded.id).select("-password");
-        if (!user) return next(errorHandler(404, "User not found"));
+        if (!user) return res.status(404).json({ message: "User not found" });
 
-        req.user = user;
-        next();
-        
+        return res.status(200).json(user);   // ✅ FIXED – Send user back!
       } catch (dbError) {
         next(dbError);
       }
