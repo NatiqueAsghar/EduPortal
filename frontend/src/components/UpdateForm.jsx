@@ -24,7 +24,7 @@ function UpdateForm({ modelName, id }) {
 
   const fetchModelSchema = async () => {
     try {
-      const res = await api.get(`/${modelName.toLowerCase()}/get/${id}`);
+      const res = await api.get(`/api/${modelName.toLowerCase()}/get/${id}`);
       const data = res.data;
 
       if (!data) {
@@ -59,7 +59,7 @@ function UpdateForm({ modelName, id }) {
 
   const fetchExistingData = async () => {
     try {
-      const res = await api.get(`/${modelName.toLowerCase()}/get/${id}`);
+      const res = await api.get(`/api/${modelName.toLowerCase()}/get/${id}`);
       setFormData(res.data);
     } catch (error) {
       console.error("Error fetching existing data:", error);
@@ -69,7 +69,7 @@ function UpdateForm({ modelName, id }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await api.post(`/${modelName.toLowerCase()}/update/${id}`, formData);
+      const res = await api.post(`/api/${modelName.toLowerCase()}/update/${id}`, formData);
 
       if (res.status === 200) {
         setSuccessMessage(`${modelName} updated successfully.`);
