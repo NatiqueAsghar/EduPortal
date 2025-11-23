@@ -17,6 +17,7 @@ import AddTeacher from "./pages/AddTeacher";
 import ProfitAnalysis from "./pages/ProfitAnalysis";
 import UpdateFormPage from "./pages/UpdateFormPage";
 import { checkAuth } from "./utils/authUtils";
+import Loading from "./components/Loading";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -51,8 +52,9 @@ export default function App() {
   // Show loading while checking authentication
   if (authLoading || !authChecked) {
     return (
-      <div className="flex justify-center items-center min-h-screen">
-        <div className="text-lg">Verifying your account...</div>
+      <div className="flex flex-col justify-center items-center min-h-screen gap-4">
+        <Loading />
+        <div className="text-lg text-gray-700">Verifying your account...</div>
       </div>
     );
   }
