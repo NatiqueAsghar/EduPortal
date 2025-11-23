@@ -1,128 +1,160 @@
-📚🎓 School Management Application
+# 🎓📚 EduPortal — School Management Application
 
-A full-stack School Management System built using the MERN stack (MongoDB, Express.js, React.js, Node.js) with Tailwind CSS, Material UI, and AG Charts for analytics.
+A modern, scalable, and feature-rich **School Management System** built using the **MERN Stack**, styled with **Tailwind CSS & Material UI**, and powered by **AG Charts** for analytics.
 
-This application manages classes, teachers, and students, with dashboards and insights for school operations.
+EduPortal allows smooth management of **classes**, **teachers**, **students**, and includes a complete **analytics dashboard** for academic & financial insights.
 
-🎥 Demo Video
+---
 
-👉 Watch the demo here:
+## 🎥 Live Demo
+**EduPortal App:** https://eduportal-self.vercel.app/
+
+<p align="center">
+  <img width="100%" src="https://github.com/user-attachments/assets/d9ecb48f-b669-45c0-a98f-0748159c1a0a" alt="EduPortal Dashboard Screenshot"/>
+</p>
+
+---
+
+## 🚀 Tech Stack
+
+| Layer        | Technology |
+|------------- |-----------:|
+| **Frontend** | React.js, Tailwind CSS, Material UI, Redux Toolkit, AG Charts |
+| **Backend**  | Node.js, Express.js, MongoDB & Mongoose, JWT Authentication, Cloudinary (Image Uploads) |
+
+---
+
+## ⭐ Key Features
+
+### 🔹 1. School Data Management
+
+**Class**
+- Class name & year  
+- Assigned teacher  
+- Student capacity  
+- Student list  
+- Fee details  
+
+**Teacher**
+- Personal details  
+- Contact information  
+- Salary  
+- Assigned class  
+
+**Student**
+- Student profile  
+- Contact info  
+- Fee status  
+- Class allocation  
+
+---
+
+### 🔹 2. Full CRUD Operations
+CRUD available for:
+- Classes  
+- Teachers  
+- Students  
+
+Includes dynamic validation and reusable UI components.
+
+---
+
+### 🔹 3. Dynamic & Reusable UI Components
+- Auto-generated input fields  
+- Reusable form layouts  
+- Fully responsive UI  
+
+---
+
+### 🔹 4. Class Capacity Restriction
+Prevents adding students once the class maximum is reached.
+
+---
+
+### 🔹 5. Advanced Analytics Dashboard
+
+**Class Analytics**
+- Total students  
+- Teacher details  
+- Student distribution  
+- Male/Female ratio  
+
+**Financial Analytics**
+- Monthly & yearly fees  
+- Monthly & yearly teacher salaries  
+- Month/Year toggle  
+
+---
+
+### 🎁 Extra Features
+- 🔍 Search  
+- 🔍 Sorting  
+- 🔍 Filtering  
+- 📄 Pagination  
+- ✔️ Form validation  
+- 🔐 JWT + Cookie authentication  
+- ☁️ Cloudinary image uploads  
+
+---
+
+## 📦 Installation & Setup
+
+> These commands assume you are using the repository structure:
+> ```
+> /EduPortal
+>   /frontend
+>   /backend
+> ```
 
 
+Make sure you have Node.js, npm, and MongoDB installed.
 
-🚀 Tech Stack
-Frontend:
-        React.js
-        Tailwind CSS
-        Material UI
-        AG Charts
-        Redux
-Backend:
+1️⃣ Clone the repository
+git clone https://github.com/NatiqueAsghar/EduPortal.git
 
-        Node.js
-        Express.js
-        MongoDB
+2️⃣ Navigate to the project
+cd EduPortal
 
-⭐ Features
-🔹 1. Data Management
-
-Manages three core entities:
-
-Class
-
-Class name, year, teacher, student list, fee structure, etc.
-
-Teacher
-
-Personal details, contact info, salary, assigned class, etc.
-
-Student
-
-Name, gender, DOB, contact, fees paid, assigned class, etc.
-
-🔹 2. CRUD Operations
-
-Supports full CRUD functionality for:
-
-Classes
-
-Teachers
-
-Students
-
-🔹 3. Reusable & Dynamic UI
-
-Reusable form components
-
-Dynamic form fields based on selected model
-
-Responsive UI with Material UI + Tailwind
-
-🔹 4. Class Size Limit
-
-Each class has a maximum student limit.
-
-🔹 5. Analytics Dashboard
-
-Class Analytics
-
-Class overview, teacher details, student list
-
-Male vs. female student distribution chart
-
-Financial Analytics
-
-Monthly & yearly teacher salary expenses
-
-Monthly & yearly student fees income
-
-Toggle between monthly/yearly view
-
-Month/year dropdowns for filtering
-
-🎁 Bonus Features
-
-🔍 Pagination
-
-🔍 Filtering
-
-🔍 Sorting
-
-✔️ Form validation
-
-📦 Installation & Setup
-
-1️⃣ Clone the Repository
-git clone https:[https://github.com/NatiqueAsghar/EduPortal.git](https://github.com/NatiqueAsghar/EduPortal.git)
-
-2️⃣ Navigate to the Project Folder
-cd school-management-application
-
-3️⃣ Install Dependencies
+3️⃣ Install backend dependencies
+cd backend
 npm install
 
-4️⃣ Setup MongoDB
+4️⃣ Install frontend dependencies
+cd ../client
+npm install
 
-Install MongoDB locally or use MongoDB Atlas
+🔧 Environment Variables
 
-Create a .env file in the root folder:
+Create a .env file inside the backend folder:
 
-MONGO_URI=your_mongodb_connection_string
-PORT=5000
+- MONGO_URI=your_mongodb_connection_string
+- JWT_SECRET=your_jwt_secret
+- CLOUDINARY_CLOUD_NAME=your_cloud_name
+- CLOUDINARY_API_KEY=your_api_key
+- CLOUDINARY_API_SECRET=your_api_secret
+- CLIENT_URL=http://localhost:5173
+- PORT=5000
 
-▶️ Usage
-1️⃣ Start Backend Server
-npm start
 
-2️⃣ Start Frontend (Client)
-cd client
-npm run dev
+▶️ Running the Application
+Start Backend Server
 
-3️⃣ Open in Browser
+        cd backend
+        npm run dev
+
+Start Frontend (Vite)
+
+        cd client
+        npm run dev
+
+Open in Browser
 http://localhost:5173/
 
+---
+🙋‍♂️ Author
 
-🙋‍♀️ Author
+Made with ❤️ by Natique Asghar
 
-Made with ❤️ and lots of coffee By Natique Asghar
-If you like this project, consider ⭐ starring the repository!
+If you found this project helpful, please ⭐ star the repository!
+
+GitHub: https://github.com/NatiqueAsghar
